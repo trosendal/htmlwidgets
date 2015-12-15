@@ -26,7 +26,7 @@ pandoc_self_contained_html <- function(input, output) {
 
   # create a simple body-only template
   template <- tempfile(fileext = ".html")
-  writeLines("$body$", template)
+  writeLines("$body$", template, useBytes = TRUE)
 
   # call pandoc with from format of "markdown_strict" to
   # get as close as possible to html -> html conversion
